@@ -568,9 +568,7 @@ a {
   align-items: center;
   gap: 12px;
 }
-  border: 2px solid rgb(var(--panel));
-  cursor: pointer;
-  padding: 0;
+
 .timeline-step {
   display: flex;
   align-items: center;
@@ -588,6 +586,8 @@ a {
   background: rgb(var(--line));
   border: 2px solid rgb(var(--panel));
   box-shadow: 0 0 0 2px rgb(var(--line));
+  cursor: pointer;
+  padding: 0;
 }
 
 .timeline-dot.active {
@@ -619,4 +619,74 @@ a {
 .panel:hover,
 .float-card:hover {
   box-shadow: 0 26px 64px rgb(var(--shadow) / 0.24);
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    padding: 24px 16px 48px;
+  }
+
+  .panel {
+    border-radius: 20px;
+  }
+
+  .toast-host {
+    left: 16px;
+    right: 16px;
+    bottom: 80px;
+  }
+
+  .toast {
+    min-width: auto;
+  }
+
+  .signed-badge {
+    display: none;
+  }
+
+  .fab {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .timeline {
+    flex-wrap: wrap;
+    gap: 10px 16px;
+  }
+
+  .timeline-step {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+  }
+
+  .timeline-connector {
+    display: none;
+  }
+
+  .futuristic-card,
+  .futuristic-prism,
+  .futuristic-ring {
+    display: none;
+  }
+
+  .futuristic-orb {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-primary,
+  .btn-ghost {
+    padding: 10px 18px;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+  }
+
+  .chip {
+    letter-spacing: 0.16em;
+  }
+
+  .futuristic-orb {
+    display: none;
+  }
 }
